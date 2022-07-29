@@ -20,7 +20,7 @@
                     <h2 class='name'>
                         <a href="/lasers/{{ $laser->id }}">{{ $laser->name }}</a>
                     </h2>
-                    <p class='description'>{{ $laser->description }}</p>
+                    <p class='description'>{{ $laser->sentence }}</p>
                 </div>
             @endforeach
         </div>

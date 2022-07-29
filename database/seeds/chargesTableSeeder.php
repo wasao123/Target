@@ -13,15 +13,18 @@ class chargesTableSeeder extends Seeder
     {
         DB::table('charges')->insert([
         'name' => '毎日運動する（でも頑張りすぎない）',
-        'description' => 'ガッツリやるより「小さく続ける」',
+        'sentence' => 'ガッツリやるより「小さく続ける」',
+        'full_text' => 'ガッツリやるより「小さく続ける」!!!!!!',
     ]);
     DB::table('charges')->insert([
         'name' => '歩きまわる',
-        'description' => 'ウォーキングは「奇跡の薬」なのだ。',
+        'sentence' => 'ウォーキングは「奇跡の薬」なのだ。',
+        'full_text' => 'ウォーキングは「奇跡の薬」なのだ。',
     ]);
      DB::table('charges')->insert([
         'name' => '「めんどくさいこと」をする',
-        'description' => 'デフォルトを「便利なこと」から「元気が出ること」に変えるだけでいい。',
+        'sentence' => 'デフォルトを「便利なこと」から「元気が出ること」に変えるだけでいい。',
+        'full_text' => 'デフォルトを「便利なこと」から「元気が出ること」に変えるだけでいい。',
     ]);
     }
 }

@@ -16,7 +16,8 @@ class CreateTuningsTable extends Migration
         Schema::create('tunings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 50);
-            $table->string('description', 1000);
+            $table->string('sentence', 1000);
+            $table->string('full_text', 1000);
         });
     }
 

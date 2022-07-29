@@ -1,3 +1,6 @@
+@extends('layouts.app')　　　　　　　　　　　　　　　　　　
+
+@section('content')
 <!DOCTYPE HTML>
 <html lang="{{ str_replace("_", "-", app()->getLocale()) }}">
     <head>
@@ -15,12 +18,21 @@
         <div class="content">
             <div class="content__highlight">
                  <h3>本文</h3>
-                  <p>{{ $highlight->description }}</p> 
+                  <p>{{ $highlight->full_text }}</p> 
             </div>
         </div>
         <div class="footer">
             <a href="/highlights">戻る</a>
-            <a href="/lasers">選択</a>
+            
+            
+            <form method="POST" action="/highlights/{highlight}">
+                @csrf
+                <input  name="tactics[highlight_id]" value="{{ $highlight->id }}"/>
+                <input type ="hidden" name="tactics[user_id]" value="{{\Auth::id()}}"/>
+                <input type="submit" value="選択"/>
+            </form>
         </div>
     </body>
 </html>
+
+@endsection

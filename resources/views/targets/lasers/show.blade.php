@@ -15,12 +15,19 @@
         <div class="content">
             <div class="content_laser">
                  <h3>本文</h3>
-                  <p>{{ $laser->description }}</p> 
+                  <p>{{ $laser->full_text }}</p> 
             </div>
         </div>
         <div class="footer">
             <a href="/lasers">戻る</a>
-            <a href="/charges">選択</a>
+            
+            <form method="POST" action="/lasers/{laser}">
+                @csrf
+                @method('PUT')
+                <input  name="tactics[laser_id]" value="{{ $laser->id }}"/>
+                <input type ="hidden" name="tactics[user_id]" value="{{\Auth::id()}}"/>
+                <input type="submit" value="選択"/>
+            </form>
         </div>
     </body>
 </html>

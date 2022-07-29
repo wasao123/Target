@@ -20,7 +20,7 @@
                     <h2 class='name'>
                         <a href="/highlights/{{ $highlight->id }}">{{ $highlight->name }}</a>
                     </h2>
-                    <p class='description'>{{ $highlight->description }}</p>
+                    <p class='description'>{{ $highlight->sentence }}</p>
                 </div>
             @endforeach
         </div>
