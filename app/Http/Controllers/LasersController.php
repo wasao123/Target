@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Laser;
+use App\Tactics;
+use App\Charge;
 use Illuminate\Http\Request;
 
 class LasersController extends Controller
@@ -22,6 +24,16 @@ class LasersController extends Controller
   public function show(laser $laser)
   {
       return view('targets/lasers/show')->with(['laser' => $laser]);
+  }
+  
+   public  function update(Request $request, Tactics  $tactic , Charge $charge )
+  {
+      $input = $request['tactics'];
+      // dd($input);
+
+      Tactics::orderBy('updated_at', 'desc')->first()->fill($input)->save();
+      return redirect('/charges/' . $charge->id);
+      
   }
 }
 ?>

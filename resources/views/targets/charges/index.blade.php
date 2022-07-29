@@ -14,17 +14,17 @@
             {{Auth::user()->name}}
         <h1>Makeup Time</h1>
         <div class='charges'>
-            @foreach ($charges as $charge)
+          
+        </div>
+    </body>  @foreach ($charges as $charge)
             
                 <div class='highlight'>
                     <h2 class='name'>
                         <a href="/charges/{{ $charge->id }}">{{ $charge->name }}</a>
                     </h2>
-                    <p class='description'>{{ $charge->description }}</p>
+                    <p class='description'>{{ $charge->sentence }}</p>
                 </div>
             @endforeach
-        </div>
-    </body>
 </html>
 
 @endsection

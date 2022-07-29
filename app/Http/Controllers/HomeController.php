@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tactics;
+use App\Highlight;
+use App\Laser;
+use App\Charge;
 
 class HomeController extends Controller
 {
@@ -21,8 +25,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Tactics $tactics,Highlight $highlight,Laser $laser,Charge $charge)
     {
-        return view('home');
+        // $tactics = [DB::table(‘tactics’)->find(1)];
+        $tactics = $tactics->orderBy('updated_at', 'desc')->first();
+        //  dd($tactics->highlight->name);
+        return view('home')->with([
+            'tactics' =>$tactics,
+            'Highlight' => $highlight,
+            'Laser' => $laser,
+            'Charge' => $charge
+            ]);
     }
 }

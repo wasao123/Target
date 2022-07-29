@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Charge;
+use App\Tactics;
 use Illuminate\Http\Request;
 
 class ChargesController extends Controller
@@ -22,6 +23,14 @@ class ChargesController extends Controller
   public function show(Charge $charge)
   {
       return view('targets/charges/show')->with(['charge' => $charge]);
+  }
+  
+  public function update(Request $request, Tactics  $tactic)
+  {
+      $input = $request['tactics'];
+      Tactics::orderBy('updated_at', 'desc')->first()->fill($input)->save();
+      // dd($input);
+      return redirect('/home');
   }
 }
 ?>
