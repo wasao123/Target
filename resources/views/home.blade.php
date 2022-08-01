@@ -14,13 +14,15 @@
                         </div>
                     @endif
                     
-                    <div class="today's-target">
+                      <div class="today's-target">
                         <h1>目標</h1>
                     </div>
                     <h2>
                         <a href="highlights" class="highlight">戦術を選ぶ</a>
                     </h2>
-                    
+                    @if(empty($tactics->highlight_id))
+                     
+                    @else
                     <div class="today's-tactics">
                         <h2　class="tactics">
                             今日の戦術
@@ -50,6 +52,7 @@
                         <a href="/chart/index" class="chart">chart</a>
                     </h2>
                     <footer></footer>
+                    @endif
                 </div>
             </div>
         </div>
