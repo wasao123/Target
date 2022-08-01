@@ -21,7 +21,7 @@ class TuningsController extends Controller
             'Highlight' => $highlight,
             'Laser' => $laser,
             'Charge' => $charge,
-            'tunings' => $tuning->get()
+            'tunings' => $tuning->orderBy('updated_at', 'desc')->get(),
             ]);
     }
     

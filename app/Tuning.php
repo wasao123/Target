@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tuning extends Model
 {
+    protected $table = 'tuning';
+
     protected $fillable = [
     'title',
     'makeup_time',
@@ -17,6 +19,9 @@ class Tuning extends Model
     'charge_impressions',
     'thank',
     'deleted_at',
+    'highlight_id',
+    'laser_id',
+    'charge_id',
 ];
     
 public function highlight()

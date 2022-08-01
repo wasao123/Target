@@ -45,16 +45,19 @@
             <div class="highlight_impressions">
                 <h3>highlight</h3>
                 <h4><a href="/highlights/{{ $tactics->highlight_id }}">{{ $tactics->highlight->name }}</a></h4>
+                 <input type ="hidden" name="tuning[highlight_id]" value="{{ $tactics->highlight_id }}"/>
                 <textarea name="tuning[highlight_impressions]" placeholder="highlightはどうだったか？"></textarea>
             </div>
             <div class="laser">
                 <h3>laser</h3>
                 <h4><a href="/highlights/{{ $tactics->laser_id }}">{{ $tactics->laser->name }}</a></h4>
+                <input type ="hidden" name="tuning[laser_id]" value="{{ $tactics->laser_id }}"/>
                 <textarea name="tuning[laser_impressions]" placeholder="laserはどうだったか？"></textarea>
             </div>
             <div class="charge">
                 <h3>charge</h3>
                 <h4><a href="/highlights/{{ $tactics->charge_id }}">{{ $tactics->charge->name }}</a></h4>
+                <input type ="hidden" name="tuning[charge_id]" value="{{$tactics->charge_id }}"/>
                 <textarea name="tuning[charge_impressions]" placeholder="chargeはどうだったか？"></textarea>
             </div>
             <div class="thank">
