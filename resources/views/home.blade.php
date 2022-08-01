@@ -17,8 +17,10 @@
                     <div class="today's-target">
                         <h1>目標</h1>
                     </div>
-                    <a href="highlights" class="highlight">戦術を選ぶ</a>
-
+                    <h2>
+                        <a href="highlights" class="highlight">戦術を選ぶ</a>
+                    </h2>
+                    
                     <div class="today's-tactics">
                         <h2　class="tactics">
                             今日の戦術
@@ -41,6 +43,12 @@
                         </h3>
                         <a href="/highlights/{{ $tactics->charge_id }}">{{ $tactics->charge->name }}</a>
                     </div>
+                    <h2>
+                        <a href="tunings" class="tuning">tuning</a>
+                    </h2>
+                    <h2>
+                        <a href="/chart/index" class="chart">chart</a>
+                    </h2>
                     <footer></footer>
                 </div>
             </div>

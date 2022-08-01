@@ -16,4 +16,8 @@ public function tactics()
     return $this->hasMany('App\Tactics');
 }
 
+public function tuning()
+{
+    return $this->hasMany('App\Tuning');
+}
 }

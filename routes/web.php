@@ -32,3 +32,12 @@ Route::get('/charges', 'ChargesController@index')->name('charge');
 Route::get('/charges/{charge}', 'ChargesController@show');
 // PUTアクセスを受け付けられるようにします。
 Route::put('/charges/{charge}', 'ChargesController@update');
+
+// tuning
+Route::post('/tuning/store', 'TuningsController@store');
+Route::get('/tunings', 'TuningsController@index')->name('tuning');
+// Route::get('/tunings/{tuning}/edit', 'TuningsController@edit');
+// Route::put('/tunings/{tuning}', 'TuningsController@update');
+//折れ線グラフを作ってます。
+Route::get('/tunings/create', 'TuningsController@create');
+Route::get('/chart/index', 'TuningsController@chart');
