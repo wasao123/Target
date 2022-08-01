@@ -4,14 +4,21 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tactics extends Model
+class Tuning extends Model
 {
     protected $fillable = [
-    'highlight_id',
+    'title',
+    'makeup_time',
+    'laser_evaluation',
+    'charge_evaluation',
     'user_id',
-    'laser_id',
-    'charge_id',
+    'highlight_impressions',
+    'laser_impressions',
+    'charge_impressions',
+    'thank',
+    'deleted_at',
 ];
+    
 public function highlight()
 {
     return $this->belongsTo('App\Highlight');
@@ -26,8 +33,8 @@ public function charge()
 {
     return $this->belongsTo('App\Charge');
 }
-public function tuning()
+public function tactics()
 {
-    return $this->hasMany('App\Tuning');
+    return $this->belongsTo('App\Tactics');
 }
 }

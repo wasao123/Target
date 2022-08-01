@@ -11,7 +11,6 @@
        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
         <body>
-            {{Auth::user()->name}}
         <h1>Makeup Time</h1>
         <div class='highlights'>
             @foreach ($lasers as $laser)
