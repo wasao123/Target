@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
     "content-hash": "2a6ad39741347f7ba1700b0a5bdc6b53",
-=======
-    "content-hash": "3d2406a474250b1f48d4af86a5e6edc9",
->>>>>>> ded4254 (git push heroku master時に以下のようなエラーが出る　対処法)
     "packages": [
         {
             "name": "doctrine/inflector",
