@@ -40,4 +40,5 @@ Route::get('/tunings', 'TuningsController@index')->name('tuning');
 // Route::put('/tunings/{tuning}', 'TuningsController@update');
 //折れ線グラフを作ってます。
 Route::get('/tunings/create', 'TuningsController@create');
-Route::get('/chart/index', 'TuningsController@chart');
+Route::get('/laserchart/index', 'TuningsController@laserchart');
+Route::get('/chargechart/index', 'TuningsController@chargechart');

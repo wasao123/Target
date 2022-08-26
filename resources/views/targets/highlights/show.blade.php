@@ -27,7 +27,7 @@
             
             <form method="POST" action="/highlights/{highlight}">
                 @csrf
-                <input  name="tactics[highlight_id]" value="{{ $highlight->id }}"/>
+                <input type ="hidden" name="tactics[highlight_id]" value="{{ $highlight->id }}"/>
                 <input type ="hidden" name="tactics[user_id]" value="{{\Auth::id()}}"/>
                 <input type="submit" value="選択"/>
             </form>
