@@ -11,12 +11,13 @@
        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
         <body>
-        <h1>Makeup Time</h1>
+        <h1>メイクタイム・メモ</h1>
         <h2 class='create'>
             <a href='/tunings/create'>create</a>
         </h2>
         <div class='tunings'>
         @foreach ($tunings as $tuning)
+        <h2 class='date'>{{ $tuning->updated_at}}</h2>
         <h2>今日のハイライト</h2>
         <h2 class='Title'>{{ $tuning->title}}</h2>
         
@@ -33,11 +34,16 @@
         <h3>今日のエネルギーレベル</h3>
         <h2>charge</h2><h4 class='charge_evaluation'>{{ $tuning->charge_evaluation}}</h4>
         
+        
         <h2>今日試した戦術</h2>
-        <h2><h4><a href="/highlights/{{ $tactics->highlight_id }}">{{ $tactics->highlight->name }}</a></h4></h2><h4 class='highlight_impressions'>{{ $tuning->highlight_impressions}}</h4>
-        <h2></h2><h4 class='laser_impressions'>{{ $tuning->laser_impressions}}</h4>
-        <h2></h2><h4 class='charge_impressions'>{{ $tuning->charge_impressions}}</h4>
-        <h2></h2><h4 class='thank'>{{ $tuning->thank}}</h4>
+        
+        <h4><a href="/highlights/{{ $tactics->highlight_id }}">{{ $tactics->highlight->name }}</a></h4>
+        <h4 class='highlight_impressions'>{{ $tuning->highlight_impressions}}</h4>
+        <h4><a href="/highlights/{{ $tactics->laser_id }}">{{ $tactics->laser->name }}</a></h4>
+        <h4 class='laser_impressions'>{{ $tuning->laser_impressions}}</h4>
+        <h4><a href="/highlights/{{ $tactics->charge_id }}">{{ $tactics->charge->name }}</a></h4>
+        <h4 class='charge_impressions'>{{ $tuning->charge_impressions}}</h4>
+        <h4 class='thank'>{{ $tuning->thank}}</h4>
         <!--<p class="edit">[<a href="/tunings/{{ $tuning->id }}/edit">編集</a>]</p>-->
         @endforeach
         </div>

@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+       <title>Makeup Time</title>
+       <link rel="stylesheet" href="{{asset('/css/home/index.css')}}">
+       <!-- Fonts -->
+       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -49,7 +58,10 @@
                         <a href="tunings" class="tuning">tuning</a>
                     </h2>
                     <h2>
-                        <a href="/chart/index" class="chart">chart</a>
+                        <a href="/laserchart/index" class="chart">Laserchart</a>
+                    </h2>
+                    <h2>
+                        <a href="/chargechart/index" class="chargechart">Chargechart</a>
                     </h2>
                     <footer></footer>
                     @endif
