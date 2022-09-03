@@ -7,6 +7,7 @@
     <head>
         <meta charset="utf-8">
        <title>Makeup Time</title>
+       <link rel="stylesheet" href="{{asset('/css/highlight/index.css')}}">
        <!-- Fonts -->
        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
