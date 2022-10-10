@@ -7,26 +7,45 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Makeup Time</title>  
-        <link rel="stylesheet" href="{{asset('/css/highlight/show.css')}}">
+        <link rel="stylesheet" href="{{asset('/css/tactics/show.css')}}">
         <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <h1 class="name">
-            {{ $highlight->name }}
-        </h1>
-        <div class="content">
-            <div class="content__highlight">
-                 <h3>本文</h3>
-                  <p>{{ $highlight->full_text }}</p> 
+        <h1>Makeup Time<br><span>時間術大全補助サイト</span></h1>
+             <ul class="globalNavi">
+            <li>
+                <a href="/home">HOME</a>
+            </li>
+            <li>
+                <a href="/tunings" class="tuning">TUNING</a>
+            </li>
+            <li>
+                <a href="/laserchart/index" class="chart">LASERCHART</a>
+            </li>
+            <li>
+                <a href="/chargechart/index" class="chargechart">CHARGCHART</a>
+            </li>
+            </ul>
+            
+            <h1 class="name">
+                {{ $highlight->name }}
+            </h1>
+        <div class="about2">
+            <div class="border-top">
             </div>
+                    
+            <h3>本文</h3>
+            <p>{{ $highlight->full_text }}</p> 
+                    
         </div>
-        <div class="footer">
+        <div class="tacticsBT">
             <a href="/highlights">戻る</a>
-            
-            
-            <form method="POST" action="/highlights/{highlight}">
+        </div>        
+        <div class="tacticsBT2">            
+                <form method="POST" action="/highlights/{highlight}">
                 @csrf
                 <input type ="hidden" name="tactics[highlight_id]" value="{{ $highlight->id }}"/>
                 <input type ="hidden" name="tactics[user_id]" value="{{\Auth::id()}}"/>

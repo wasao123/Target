@@ -9,6 +9,7 @@ use App\Charge;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Auth;
+use validate;
 
 class TuningsController extends Controller
 {
@@ -37,6 +38,10 @@ class TuningsController extends Controller
             'Laser' => $laser,
             'Charge' => $charge
             ]);
+            
+        $validated = $request->validate([
+        'title' => 'required|unique:posts|max:255',
+        ])->validate();
     }
     public function store(Request $request, Tuning $tuning )
   {     

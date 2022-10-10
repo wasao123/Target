@@ -15,6 +15,7 @@ h1 {
 h1 span{
     font-size: 15px;
 }
+
 .globalNavi{
     text-align: center;
     margin-bottom: 50px;
@@ -31,70 +32,59 @@ h1 span{
     margin-right: 0;
 }
 
-.mainImage{
-    width:1000px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
+.about h1{
+  text-align: center;
+  font-size: 15px;
+}
+.about h1 span{
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    border-bottom: 2px solid #000000;
+    margin-bottom: 40px
 }
 
-.mainImage img{
-    width:100%;
-    height: auto;
-}
-
-.aboutSection h2{
-    text-align: center;
-    font-size: 11px;
-    margin-bottom: 40px;
-}
-
-.aboutSection{
-    width: 1000px;
+.about2{
+  width: 1000px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 30px;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
-.aboutSection ul{
-    overflow: hidden;
-    padding: 0;
-}
-
-.aboutSection li{
-    float: left;
-    list-style: none;
-    width: 32%;
-    margin-right: 2%;
-}
-
-.aboutSection li:last-child{
-    margin-right: 0;
-}
-
-.aboutSection li img{
-    width:100%;
-    height: auto;
-}
-
-.aboutSection h3{
-    font-size: 25px;
+.about2 h2{
     font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    margin: 0;
+    font-size: 28px;
 }
 
-.aboutSection p{
-    display: inline-block;
-   margin-right: 40px;
-   font-family: 'Oswald', sans-serif;
-   font-size: 16px;
-   letter-spacing: 1px;
+.about2 h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
 }
 
-.copyright {
-    text-align: center;
-    font-size: 11px;
+.about2 h4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.about2 h4 a{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+
+.about2 p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+.border-top{
+  width: 1000px;
+  border-top: 1px solid #dddddd;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
+  margin-top: 40px;
 }
 
 .tacticsBT{
@@ -114,4 +104,5 @@ h1 span{
  text-decoration: none;
  border-radius: 4px;
  font-family: 'Oswald', sans-serif;
+ margin-top: 40px;
 }
