@@ -10,7 +10,7 @@
        <mate name="discription" content="時間術大全の補助サイトです">
        <link rel="stylesheet" href="{{asset('/css/home/index.css')}}">
        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
        <!-- Fonts -->
        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
