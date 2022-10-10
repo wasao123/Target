@@ -26,15 +26,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Tactics $tactics,Highlight $highlight,Laser $laser,Charge $charge)
+    public function index(Tactics $tactics,Highlight $highlight,Laser $laser,Charge $charge,Request $request)
     {
         // $tactics = [DB::table(‘tactics’)->find(1)];
         if ($tactics->find(Auth::id()) === null){
             $tactics = null;
             }else{
+                // $user = $request->user();
+                
+                // dd($user);
                 $tactics = $tactics->find(Auth::id())->orderBy('updated_at', 'desc')->first();
             }
-            //  dd($tactics->highlight->name);
+            // dd($user_id);
             return view('home')->with([
                 'tactics' =>$tactics,
                 'Highlight' => $highlight,

@@ -12,22 +12,29 @@ class Tactics extends Model
     'laser_id',
     'charge_id',
 ];
-public function highlight()
-{
-    return $this->belongsTo('App\Highlight');
-}
+    public function highlight()
+    {
+        return $this->belongsTo('App\Highlight');
+    }
+    
+    public function laser()
+    {
+        return $this->belongsTo('App\Laser');
+    }
+    
+    public function charge()
+    {
+        return $this->belongsTo('App\Charge');
+    }
+    public function tuning()
+    {
+        return $this->hasMany('App\Tuning');
+    }
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+    
 
-public function laser()
-{
-    return $this->belongsTo('App\Laser');
-}
-
-public function charge()
-{
-    return $this->belongsTo('App\Charge');
-}
-public function tuning()
-{
-    return $this->hasMany('App\Tuning');
-}
 }
