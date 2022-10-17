@@ -106,7 +106,7 @@ h1 span{
  font-family: 'Oswald', sans-serif;
  margin-top: 40px;
 }
-.tacticsBT2{
+.tacticsBT2 {
     width:  45px;
     margin-right: auto;
     margin-left: auto;
@@ -114,7 +114,7 @@ h1 span{
 }
 
 
-.tacticsBT2 input{
+.tacticsBT2 submit{
  background-color: #000000;  
  color: #ffffff;
  display: block;

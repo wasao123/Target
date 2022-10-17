@@ -26,7 +26,7 @@
                 <a href="/laserchart/index" class="chart">LASERCHART</a>
             </li>
             <li>
-                <a href="/chargechart/index" class="chargechart">CHARGCHART</a>
+                <a href="/chargechart/index" class="chargechart">CHARGECHART</a>
             </li>
             </ul>
             

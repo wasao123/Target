@@ -26,7 +26,7 @@
                 <a href="/laserchart/index" class="chart">LASERCHART</a>
             </li>
             <li>
-                <a href="/chargechart/index" class="chargechart">CHARGCHART</a>
+                <a href="/chargechart/index" class="chargechart">CHARGECHART</a>
             </li>
             </ul>
         
@@ -88,7 +88,7 @@
                     <textarea name="tuning[thank]" placeholder="今日の感謝の瞬間"></textarea>
             <div class="tacticsBT2"> 
                 <input type ="hidden" name="tuning[user_id]" value="{{\Auth::id()}}"/>
-                <input type="submit" value="保存"/>
+                <a><input type="submit" value="保存"/></a>
             </form>
             </div>
             <div class="tacticsBT"><a href="/tunings">back</a></div>
